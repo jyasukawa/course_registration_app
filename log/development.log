@@ -1183,3 +1183,449 @@ Processing by HomeController#top as HTML
 Completed 200 OK in 85ms (Views: 71.5ms | ActiveRecord: 3.6ms | Allocations: 83513)
 
 
+Started GET "/home/top" for ::1 at 2024-07-07 19:18:32 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mLecture Load (0.2ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.1ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  Rendered home/top.html.erb within layouts/application (Duration: 43.3ms | Allocations: 40993)
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 75808)
+Completed 200 OK in 97ms (Views: 82.6ms | ActiveRecord: 2.0ms | Allocations: 83569)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "lectures"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "lectures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "time_slot" varchar, "teacher_id" integer NOT NULL, "name" varchar, "description" text, "credits" integer, "semester" varchar, "day" varchar, "period" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_lectures_on_teacher_id" ON "lectures" ("teacher_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "position" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "alectures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "time_slot" varchar DEFAULT NULL, "teacher_id" integer NOT NULL, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "credits" integer DEFAULT NULL, "semester" varchar DEFAULT NULL, "day" varchar DEFAULT NULL, "period" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_alectures_on_teacher_id" ON "alectures" ("teacher_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "alectures" ("id","time_slot","teacher_id","name","description","credits","semester","day","period","created_at","updated_at")
+                     SELECT "id","time_slot","teacher_id","name","description","credits","semester","day","period","created_at","updated_at" FROM "lectures"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "lectures"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "lectures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "time_slot" varchar DEFAULT NULL, "teacher_id" integer NOT NULL, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "credits" integer DEFAULT NULL, "semester" varchar DEFAULT NULL, "day" varchar DEFAULT NULL, "period" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b0dcfd2eb7"
+FOREIGN KEY ("teacher_id")
+  REFERENCES "teachers" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_lectures_on_teacher_id" ON "lectures" ("teacher_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "lectures" ("id","time_slot","teacher_id","name","description","credits","semester","day","period","created_at","updated_at")
+                     SELECT "id","time_slot","teacher_id","name","description","credits","semester","day","period","created_at","updated_at" FROM "alectures"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "alectures"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20240707081132)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20240707081122),
+(20240707064709);[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-07-07 10:18:51.208280', '2024-07-07 10:18:51.208282') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '1ac9d020ededbd30a50270cc4a931951f7238e24', '2024-07-07 10:18:51.209157', '2024-07-07 10:18:51.209158') RETURNING "key"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "lectures"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "lectures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "time_slot" varchar, "teacher_id" integer NOT NULL, "name" varchar, "description" text, "credits" integer, "semester" varchar, "day" varchar, "period" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_lectures_on_teacher_id" ON "lectures" ("teacher_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "position" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "alectures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "time_slot" varchar DEFAULT NULL, "teacher_id" integer NOT NULL, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "credits" integer DEFAULT NULL, "semester" varchar DEFAULT NULL, "day" varchar DEFAULT NULL, "period" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_alectures_on_teacher_id" ON "alectures" ("teacher_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "alectures" ("id","time_slot","teacher_id","name","description","credits","semester","day","period","created_at","updated_at")
+                     SELECT "id","time_slot","teacher_id","name","description","credits","semester","day","period","created_at","updated_at" FROM "lectures"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "lectures"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "lectures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "time_slot" varchar DEFAULT NULL, "teacher_id" integer NOT NULL, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "credits" integer DEFAULT NULL, "semester" varchar DEFAULT NULL, "day" varchar DEFAULT NULL, "period" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b0dcfd2eb7"
+FOREIGN KEY ("teacher_id")
+  REFERENCES "teachers" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_lectures_on_teacher_id" ON "lectures" ("teacher_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "lectures" ("id","time_slot","teacher_id","name","description","credits","semester","day","period","created_at","updated_at")
+                     SELECT "id","time_slot","teacher_id","name","description","credits","semester","day","period","created_at","updated_at" FROM "alectures"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "alectures"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20240707081132)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20240707081122),
+(20240707064709);[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-07-07 10:18:51.226336', '2024-07-07 10:18:51.226337') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2024-07-07 10:18:51.226945' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '1ac9d020ededbd30a50270cc4a931951f7238e24', '2024-07-07 10:18:51.227485', '2024-07-07 10:18:51.227486') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user1@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-07-07 10:18:51.508256"], ["updated_at", "2024-07-07 10:18:51.508256"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user2@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "user2@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-07-07 10:18:51.768338"], ["updated_at", "2024-07-07 10:18:51.768338"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (0.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "佐藤 一郎"], ["position", "教授"], ["created_at", "2024-07-07 10:18:51.775176"], ["updated_at", "2024-07-07 10:18:51.775176"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "鈴木 二郎"], ["position", "准教授"], ["created_at", "2024-07-07 10:18:51.776326"], ["updated_at", "2024-07-07 10:18:51.776326"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "田中 三郎"], ["position", "教授"], ["created_at", "2024-07-07 10:18:51.777270"], ["updated_at", "2024-07-07 10:18:51.777270"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "小林 四郎"], ["position", "准教授"], ["created_at", "2024-07-07 10:18:51.778202"], ["updated_at", "2024-07-07 10:18:51.778202"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (0.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "松本 五郎"], ["position", "教授"], ["created_at", "2024-07-07 10:18:51.782014"], ["updated_at", "2024-07-07 10:18:51.782014"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "山田 六郎"], ["position", "准教授"], ["created_at", "2024-07-07 10:18:51.783028"], ["updated_at", "2024-07-07 10:18:51.783028"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.5ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "1限"], ["teacher_id", 1], ["name", "プログラム実習１"], ["description", "C 言語によるプログラムの基本的な作り方を実習を通して学習する。"], ["credits", 2], ["semester", "前期"], ["day", "月曜日"], ["period", "1限"], ["created_at", "2024-07-07 10:18:51.793103"], ["updated_at", "2024-07-07 10:18:51.793103"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "2限"], ["teacher_id", 1], ["name", "スイッチング理論と論理設計１"], ["description", "コンピュータの演算回路や制御回路の具体的な設計法を学ぶ。"], ["credits", 1], ["semester", "前期"], ["day", "火曜日"], ["period", "2限"], ["created_at", "2024-07-07 10:18:51.794487"], ["updated_at", "2024-07-07 10:18:51.794487"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 1], ["name", "離散数学１"], ["description", "離散数学と情報数学について紹介をする。"], ["credits", 2], ["semester", "前期"], ["day", "水曜日"], ["period", "3限"], ["created_at", "2024-07-07 10:18:51.795683"], ["updated_at", "2024-07-07 10:18:51.795683"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "4限"], ["teacher_id", 1], ["name", "プログラム実習２"], ["description", "C 言語によるプログラムの基本的な作り方を実習を通して学習する。"], ["credits", 1], ["semester", "後期"], ["day", "木曜日"], ["period", "4限"], ["created_at", "2024-07-07 10:18:51.796679"], ["updated_at", "2024-07-07 10:18:51.796679"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "5限"], ["teacher_id", 1], ["name", "スイッチング理論と論理設計２"], ["description", "コンピュータのハードウェアの基礎が理解できるようになっている。"], ["credits", 2], ["semester", "後期"], ["day", "金曜日"], ["period", "5限"], ["created_at", "2024-07-07 10:18:51.797668"], ["updated_at", "2024-07-07 10:18:51.797668"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "1限"], ["teacher_id", 1], ["name", "離散数学２"], ["description", "離散数学と情報数学の基本技法の習得を目標とする。"], ["credits", 1], ["semester", "後期"], ["day", "月曜日"], ["period", "1限"], ["created_at", "2024-07-07 10:18:51.800496"], ["updated_at", "2024-07-07 10:18:51.800496"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "2限"], ["teacher_id", 2], ["name", "情報理論と機械学習"], ["description", "情報理論と機械学習の関連を理解する。"], ["credits", 2], ["semester", "前期"], ["day", "月曜日"], ["period", "2限"], ["created_at", "2024-07-07 10:18:51.801558"], ["updated_at", "2024-07-07 10:18:51.801558"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 2], ["name", "コンピュータアーキテクチャ"], ["description", "コンピュータシステムの構成，動作原理，性能を中心に講義する。"], ["credits", 1], ["semester", "前期"], ["day", "水曜日"], ["period", "3限"], ["created_at", "2024-07-07 10:18:51.802564"], ["updated_at", "2024-07-07 10:18:51.802564"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.5ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "4限"], ["teacher_id", 2], ["name", "アセンブリ言語演習"], ["description", "アセンブリ言語のブログラムを作成するスキルを身に着けることを目標とする。"], ["credits", 2], ["semester", "前期"], ["day", "金曜日"], ["period", "4限"], ["created_at", "2024-07-07 10:18:51.803881"], ["updated_at", "2024-07-07 10:18:51.803881"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.4ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "5限"], ["teacher_id", 2], ["name", "データ構造とアルゴリズム"], ["description", "代表的なデータ構造とアルゴリズムについて学ぶ。"], ["credits", 1], ["semester", "後期"], ["day", "月曜日"], ["period", "5限"], ["created_at", "2024-07-07 10:18:51.805228"], ["updated_at", "2024-07-07 10:18:51.805228"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "1限"], ["teacher_id", 2], ["name", "オブジェクト指向"], ["description", "オブジェクト指向について理解することを目指す。。"], ["credits", 2], ["semester", "後期"], ["day", "水曜日"], ["period", "1限"], ["created_at", "2024-07-07 10:18:51.806362"], ["updated_at", "2024-07-07 10:18:51.806362"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.6ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "2限"], ["teacher_id", 2], ["name", "Ｊａｖａ演習"], ["description", "Java による以上のような基本的なプログラムを作成できることを目標とする。"], ["credits", 1], ["semester", "後期"], ["day", "金曜日"], ["period", "2限"], ["created_at", "2024-07-07 10:18:51.807519"], ["updated_at", "2024-07-07 10:18:51.807519"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 3], ["name", "コンピュータネットワーク"], ["description", "ルーティングを中心としたネットワーク技術について学ぶ。"], ["credits", 2], ["semester", "前期"], ["day", "火曜日"], ["period", "3限"], ["created_at", "2024-07-07 10:18:51.808777"], ["updated_at", "2024-07-07 10:18:51.808777"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "4限"], ["teacher_id", 3], ["name", "コンピュータシミュレーション"], ["description", " 演習を通してコンピュータシミュレーションの実際を経験し、 習得することを到達目標にしている。"], ["credits", 1], ["semester", "前期"], ["day", "木曜日"], ["period", "4限"], ["created_at", "2024-07-07 10:18:51.809751"], ["updated_at", "2024-07-07 10:18:51.809751"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "2限"], ["teacher_id", 3], ["name", "組込みシステム論"], ["description", "クロス開発に関する演習を行い，組込み開発とは何かを体験する。"], ["credits", 2], ["semester", "前期"], ["day", "金曜日"], ["period", "2限"], ["created_at", "2024-07-07 10:18:51.810725"], ["updated_at", "2024-07-07 10:18:51.810725"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "4限"], ["teacher_id", 3], ["name", "ヒューマンコンピュータインタラクション"], ["description", "統計的データ処理の基本についてプログラミングを通じて学ぶ。"], ["credits", 1], ["semester", "後期"], ["day", "火曜日"], ["period", "4限"], ["created_at", "2024-07-07 10:18:51.813569"], ["updated_at", "2024-07-07 10:18:51.813569"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 3], ["name", "計算論"], ["description", "計算機を数学的に抽象化したモデルであるチューリング機械について学ぶ。"], ["credits", 2], ["semester", "後期"], ["day", "水曜日"], ["period", "3限"], ["created_at", "2024-07-07 10:18:51.814607"], ["updated_at", "2024-07-07 10:18:51.814607"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.6ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "2限"], ["teacher_id", 3], ["name", "ソフトコンピューティング"], ["description", "確率的状態推定における代表的なアルゴリズムであるカルマンフィルタとパーティクルフィルタについて解説する。"], ["credits", 1], ["semester", "後期"], ["day", "木曜日"], ["period", "2限"], ["created_at", "2024-07-07 10:18:51.815567"], ["updated_at", "2024-07-07 10:18:51.815567"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "5限"], ["teacher_id", 4], ["name", "最適化論"], ["description", "最適化問題とその問題を解くための最適化手法について授業を行う。"], ["credits", 2], ["semester", "前期"], ["day", "月曜日"], ["period", "5限"], ["created_at", "2024-07-07 10:18:51.816867"], ["updated_at", "2024-07-07 10:18:51.816867"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "1限"], ["teacher_id", 4], ["name", "集積回路"], ["description", " 集積回路の役割，設計・製造方法，設計技術，最新技術について学習する。"], ["credits", 1], ["semester", "前期"], ["day", "火曜日"], ["period", "1限"], ["created_at", "2024-07-07 10:18:51.817835"], ["updated_at", "2024-07-07 10:18:51.817835"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.4ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "2限"], ["teacher_id", 4], ["name", "ＬＳＩ設計演習"], ["description", "システム設計の実践的な設計思想および設計手法を理解することを到達目的とする。"], ["credits", 2], ["semester", "前期"], ["day", "水曜日"], ["period", "2限"], ["created_at", "2024-07-07 10:18:51.818813"], ["updated_at", "2024-07-07 10:18:51.818813"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 4], ["name", "ウェブプログラミング"], ["description", "ウェブアプリケーションにおけるクライアント側からサーバ側までの技術を広く習得することを目標とする。"], ["credits", 1], ["semester", "後期"], ["day", "水曜日"], ["period", "3限"], ["created_at", "2024-07-07 10:18:51.820023"], ["updated_at", "2024-07-07 10:18:51.820023"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 4], ["name", "プログラム言語とコンパイラ"], ["description", "コンパイラのソースコードを提示しつつ，コンパイラの実際について解説する。"], ["credits", 2], ["semester", "後期"], ["day", "木曜日"], ["period", "3限"], ["created_at", "2024-07-07 10:18:51.820983"], ["updated_at", "2024-07-07 10:18:51.820983"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 4], ["name", "オペレーティングシステム"], ["description", "ユーザーと OS の係りに関する機能を理解する。"], ["credits", 1], ["semester", "後期"], ["day", "金曜日"], ["period", "3限"], ["created_at", "2024-07-07 10:18:51.822012"], ["updated_at", "2024-07-07 10:18:51.822012"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.4ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "4限"], ["teacher_id", 5], ["name", "ソフトウェア工学"], ["description", "情報社会の高度化に対応するオブジェクト指向技術の習得を目標とする。"], ["credits", 2], ["semester", "前期"], ["day", "月曜日"], ["period", "4限"], ["created_at", "2024-07-07 10:18:51.822993"], ["updated_at", "2024-07-07 10:18:51.822993"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "4限"], ["teacher_id", 5], ["name", "データベース"], ["description", " 情報システム構築のために不可欠な基礎を体系的に習得する。"], ["credits", 1], ["semester", "前期"], ["day", "火曜日"], ["period", "4限"], ["created_at", "2024-07-07 10:18:51.825446"], ["updated_at", "2024-07-07 10:18:51.825446"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "5限"], ["teacher_id", 5], ["name", "コンピュータグラフィックス"], ["description", "簡易的なシーンのモデリングおよび、レンダリングの習得を目標とします。"], ["credits", 2], ["semester", "前期"], ["day", "金曜日"], ["period", "5限"], ["created_at", "2024-07-07 10:18:51.826438"], ["updated_at", "2024-07-07 10:18:51.826438"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "2限"], ["teacher_id", 5], ["name", "人工知能と知識処理"], ["description", "人工知能の着想、基礎技術から最先端技術までを広くカバーし、平易に講義する。"], ["credits", 1], ["semester", "後期"], ["day", "月曜日"], ["period", "2限"], ["created_at", "2024-07-07 10:18:51.827671"], ["updated_at", "2024-07-07 10:18:51.827671"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "1限"], ["teacher_id", 5], ["name", "画像処理とパターン認識"], ["description", "統計的学習手法を道具としてディジタル画像に含まれる有意な情報を適切に抽出することの重要さを理解してもらいたい。"], ["credits", 2], ["semester", "後期"], ["day", "火曜日"], ["period", "1限"], ["created_at", "2024-07-07 10:18:51.828628"], ["updated_at", "2024-07-07 10:18:51.828628"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "1限"], ["teacher_id", 5], ["name", "知能ロボット学"], ["description", "フィールドにおけるロボットについて紹介し，フィールド特有の課題や解決方法についても理解を深める。"], ["credits", 1], ["semester", "後期"], ["day", "水曜日"], ["period", "1限"], ["created_at", "2024-07-07 10:18:51.829575"], ["updated_at", "2024-07-07 10:18:51.829575"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.5ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "4限"], ["teacher_id", 6], ["name", "情報セキュリティ"], ["description", "高度なネットワークシステムを構築する際に必要な情報セキュリティ技術を学ぶ。"], ["credits", 2], ["semester", "前期"], ["day", "火曜日"], ["period", "4限"], ["created_at", "2024-07-07 10:18:51.830608"], ["updated_at", "2024-07-07 10:18:51.830608"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "1限"], ["teacher_id", 6], ["name", "ワールドワイドウェブ"], ["description", " ワールドワイドウェブでのAI 技術，その最新動向，これから期待される技術の方向性を紹介する。"], ["credits", 1], ["semester", "前期"], ["day", "木曜日"], ["period", "1限"], ["created_at", "2024-07-07 10:18:51.831717"], ["updated_at", "2024-07-07 10:18:51.831717"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 6], ["name", "情報システム論"], ["description", "世に存在する様々なシェアトップクラスの実システムをとりあげ，どのような背景や仕組みによって，それらが成り立っているかを知る。"], ["credits", 2], ["semester", "前期"], ["day", "金曜日"], ["period", "3限"], ["created_at", "2024-07-07 10:18:51.832654"], ["updated_at", "2024-07-07 10:18:51.832654"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "2限"], ["teacher_id", 6], ["name", "脳情報システム論"], ["description", "ニューラルネットワークを比較的・構成的な視点から深く理解できるようになることを目標とする。"], ["credits", 1], ["semester", "後期"], ["day", "月曜日"], ["period", "2限"], ["created_at", "2024-07-07 10:18:51.833616"], ["updated_at", "2024-07-07 10:18:51.833616"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "1限"], ["teacher_id", 6], ["name", "マルチメディア論"], ["description", "マルチメディアシステムを支える要素技術を理解し，総合システムを構築する力を身につける。"], ["credits", 2], ["semester", "後期"], ["day", "水曜日"], ["period", "1限"], ["created_at", "2024-07-07 10:18:51.835376"], ["updated_at", "2024-07-07 10:18:51.835376"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "2限"], ["teacher_id", 6], ["name", "情報社会と情報倫理"], ["description", "情報社会における情報との関わり方を理解するとともに， 守るべき情報倫理を修得する。"], ["credits", 1], ["semester", "後期"], ["day", "木曜日"], ["period", "2限"], ["created_at", "2024-07-07 10:18:51.836410"], ["updated_at", "2024-07-07 10:18:51.836410"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/home/top" for ::1 at 2024-07-07 19:18:58 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mLecture Load (0.1ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.1ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  Rendered home/top.html.erb within layouts/application (Duration: 24.9ms | Allocations: 41815)
+  Rendered layout layouts/application.html.erb (Duration: 53.8ms | Allocations: 76620)
+Completed 200 OK in 63ms (Views: 53.9ms | ActiveRecord: 1.8ms | Allocations: 84383)
+
+
