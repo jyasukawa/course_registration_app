@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_slot: MyString
+  teacher: one
+  name: MyString
+  description: MyText
+  credits: 1
+  semester: MyString
+  day: MyString
+  period: MyString
+
+two:
+  time_slot: MyString
+  teacher: two
+  name: MyString
+  description: MyText
+  credits: 1
+  semester: MyString
+  day: MyString
+  period: MyString

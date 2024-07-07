@@ -1,3 +1,71 @@
 <h1>Home#top</h1>
 <%= link_to "パスワード変更", edit_user_registration_path %>
 <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
+
+<h1>大学の講義一覧表</h1>
+
+<h2>前期</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>時限</th>
+      <th>月曜日</th>
+      <th>火曜日</th>
+      <th>水曜日</th>
+      <th>木曜日</th>
+      <th>金曜日</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% (1..5).each do |period| %>
+      <tr>
+        <td><%= "#{period}限" %></td>
+        <% ['月曜日', '火曜日', '水曜日', '木曜日', '金曜日'].each do |day| %>
+          <td>
+            <% lectures = Lecture.where(day: day, period: "#{period}限", semester: '前期') %>
+            <% if lectures.present? %>
+              <% lectures.each do |lecture| %>
+                <%= lecture.name %> <br>
+              <% end %>
+            <% else %>
+              &nbsp; <!-- 空白を表示 -->
+            <% end %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>後期</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>時限</th>
+      <th>月曜日</th>
+      <th>火曜日</th>
+      <th>水曜日</th>
+      <th>木曜日</th>
+      <th>金曜日</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% (1..5).each do |period| %>
+      <tr>
+        <td><%= "#{period}限" %></td>
+        <% ['月曜日', '火曜日', '水曜日', '木曜日', '金曜日'].each do |day| %>
+          <td>
+            <% lectures = Lecture.where(day: day, period: "#{period}限", semester: '後期') %>
+            <% if lectures.present? %>
+              <% lectures.each do |lecture| %>
+                <%= lecture.name %> <br>
+              <% end %>
+            <% else %>
+              &nbsp; <!-- 空白を表示 -->
+            <% end %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

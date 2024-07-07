@@ -799,3 +799,387 @@ Processing by HomeController#top as HTML
 Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1714)
 
 
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLectures (20240707081122)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "lectures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "time_slot" varchar, "teacher_id" integer NOT NULL, "name" varchar, "description" text, "credits" integer, "semester" varchar, "day" varchar, "period" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b0dcfd2eb7"
+FOREIGN KEY ("teacher_id")
+  REFERENCES "teachers" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_lectures_on_teacher_id" ON "lectures" ("teacher_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240707081122') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTeachers (20240707081132)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "position" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240707081132') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (4.1ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "山田太郎"], ["position", "教授"], ["created_at", "2024-07-07 08:18:53.788754"], ["updated_at", "2024-07-07 08:18:53.788754"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (0.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "田中花子"], ["position", "准教授"], ["created_at", "2024-07-07 08:18:53.795922"], ["updated_at", "2024-07-07 08:18:53.795922"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "佐藤太郎"], ["position", "教授"], ["created_at", "2024-07-07 08:18:53.797093"], ["updated_at", "2024-07-07 08:18:53.797093"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "佐藤花子"], ["position", "准教授"], ["created_at", "2024-07-07 08:18:53.798033"], ["updated_at", "2024-07-07 08:18:53.798033"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (0.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "鈴木太郎"], ["position", "教授"], ["created_at", "2024-07-07 08:18:53.804679"], ["updated_at", "2024-07-07 08:18:53.804679"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "鈴木花子"], ["position", "准教授"], ["created_at", "2024-07-07 08:18:53.805781"], ["updated_at", "2024-07-07 08:18:53.805781"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.4ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "1限"], ["teacher_id", 1], ["name", "数学入門"], ["description", "基礎的な数学の講義です。"], ["credits", 2], ["semester", "前期"], ["day", "月曜日"], ["period", "1限"], ["created_at", "2024-07-07 08:18:53.819575"], ["updated_at", "2024-07-07 08:18:53.819575"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.4ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 2], ["name", "英語コミュニケーション"], ["description", "英語でのコミュニケーション能力を高めます。"], ["credits", 2], ["semester", "後期"], ["day", "火曜日"], ["period", "3限"], ["created_at", "2024-07-07 08:18:53.820851"], ["updated_at", "2024-07-07 08:18:53.820851"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.4ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "1限"], ["teacher_id", 3], ["name", "物理入門"], ["description", "基礎的な講義です。"], ["credits", 2], ["semester", "後期"], ["day", "月曜日"], ["period", "1限"], ["created_at", "2024-07-07 08:18:53.822002"], ["updated_at", "2024-07-07 08:18:53.822002"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 4], ["name", "コミュニケーション"], ["description", "コミュニケーション能力を高めます。"], ["credits", 2], ["semester", "後期"], ["day", "火曜日"], ["period", "3限"], ["created_at", "2024-07-07 08:18:53.823062"], ["updated_at", "2024-07-07 08:18:53.823062"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 5], ["name", "科学"], ["description", "科学能力を高めます。"], ["credits", 2], ["semester", "前期"], ["day", "金曜日"], ["period", "5限"], ["created_at", "2024-07-07 08:18:53.823951"], ["updated_at", "2024-07-07 08:18:53.823951"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLecture Create (0.3ms)[0m  [1m[32mINSERT INTO "lectures" ("time_slot", "teacher_id", "name", "description", "credits", "semester", "day", "period", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["time_slot", "3限"], ["teacher_id", 6], ["name", "英語3"], ["description", "英語3。"], ["credits", 2], ["semester", "前期"], ["day", "木曜日"], ["period", "4限"], ["created_at", "2024-07-07 08:18:53.824827"], ["updated_at", "2024-07-07 08:18:53.824827"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/home/top" for ::1 at 2024-07-07 17:22:55 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mLecture Load (0.1ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "月曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "火曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "水曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "木曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "金曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "月曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "火曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "水曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "木曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "金曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "月曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "火曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "水曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "木曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "金曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "月曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "火曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "水曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "木曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "金曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "月曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "火曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "水曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "木曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "金曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:25
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "月曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "火曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "水曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "木曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "金曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "月曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "火曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "水曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "木曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "金曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "月曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "火曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "水曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "木曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "金曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "月曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "火曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "水曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "木曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "金曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "月曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "火曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "水曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "木曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["day", "金曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/home/top.html.erb:52
+  Rendered home/top.html.erb within layouts/application (Duration: 52.9ms | Allocations: 36648)
+  Rendered layout layouts/application.html.erb (Duration: 72.4ms | Allocations: 71437)
+Completed 200 OK in 91ms (Views: 79.1ms | ActiveRecord: 1.9ms | Allocations: 79198)
+
+
+Started GET "/home/top" for ::1 at 2024-07-07 17:25:32 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mLecture Load (0.1ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  Rendered home/top.html.erb within layouts/application (Duration: 40.1ms | Allocations: 40987)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 75749)
+Completed 200 OK in 84ms (Views: 71.2ms | ActiveRecord: 1.7ms | Allocations: 83510)
+
+
+Started GET "/home/top" for ::1 at 2024-07-07 17:27:31 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mLecture Load (0.2ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.2ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "2限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.5ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.2ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "3限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.5ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "5限"], ["semester", "前期"]]
+  ↳ app/views/home/top.html.erb:26
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "1限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "2限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "3限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "4限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "火曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "水曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "木曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "金曜日"], ["period", "5限"], ["semester", "後期"]]
+  ↳ app/views/home/top.html.erb:59
+  Rendered home/top.html.erb within layouts/application (Duration: 39.7ms | Allocations: 40983)
+  Rendered layout layouts/application.html.erb (Duration: 65.3ms | Allocations: 75752)
+Completed 200 OK in 85ms (Views: 71.5ms | ActiveRecord: 3.6ms | Allocations: 83513)
+
+
