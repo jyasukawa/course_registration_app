@@ -20,10 +20,6 @@ class EnrollmentsController < ApplicationController
     else
       render :new
     end
-
-    def enrollment_params
-      params.require(:enrollment).permit(:lecture_id)
-    end
   end
 
   def edit
@@ -44,7 +40,7 @@ class EnrollmentsController < ApplicationController
     @enrollment = Enrollment.find(params[:id])
     @enrollment.destroy
 
-    redirect_to enrollments_url, notice: 'Enrollment was successfully destroyed.'
+    redirect_to course_registration_path, notice: '授業を削除しました。'
   end
 
   private

@@ -10571,3 +10571,661 @@ Processing by EnrollmentsController#new as HTML
 Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 2263)
 
 
+Started GET "/course_registration" for ::1 at 2024-07-08 18:26:10 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#course_registration as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/course_registration.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (1.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  Rendered registrations/course_registration.html.erb within layouts/application (Duration: 94.5ms | Allocations: 97377)
+  Rendered layout layouts/application.html.erb (Duration: 100.6ms | Allocations: 112314)
+Completed 200 OK in 108ms (Views: 99.2ms | ActiveRecord: 3.4ms | Allocations: 117546)
+
+
+Started GET "/enrollments/new?day=%E6%9C%88%E6%9B%9C%E6%97%A5&period=1%E9%99%90&semester=%E5%89%8D%E6%9C%9F" for ::1 at 2024-07-08 18:26:13 +0900
+Processing by EnrollmentsController#new as HTML
+  Parameters: {"day"=>"月曜日", "period"=>"1限", "semester"=>"前期"}
+  Rendering layout layouts/application.html.erb
+  Rendering enrollments/new.html.erb within layouts/application
+  [1m[36mLecture Load (0.2ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "1限"], ["semester", "前期"]]
+  ↳ app/views/enrollments/new.html.erb:9
+  Rendered enrollments/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2509)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3638)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 4158)
+
+
+Started POST "/enrollments" for ::1 at 2024-07-08 18:26:16 +0900
+Processing by EnrollmentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "enrollment"=>{"day"=>"月曜日", "period"=>"1限", "semester"=>"前期", "lecture_id"=>"1"}, "commit"=>"登録する"}
+[31mUnpermitted parameters: :day, :period, :semester. Context: { controller: EnrollmentsController, action: create, request: #<ActionDispatch::Request:0x0000000134655470>, params: {"authenticity_token"=>"[FILTERED]", "enrollment"=>{"day"=>"月曜日", "period"=>"1限", "semester"=>"前期", "lecture_id"=>"1"}, "commit"=>"登録する", "controller"=>"enrollments", "action"=>"create"} }[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/enrollments_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/enrollments_controller.rb:18:in `create'
+  [1m[36mLecture Load (0.9ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/enrollments_controller.rb:18:in `create'
+  [1m[36mEnrollment Create (1.2ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "lecture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["lecture_id", 1], ["created_at", "2024-07-08 09:26:16.198469"], ["updated_at", "2024-07-08 09:26:16.198469"]]
+  ↳ app/controllers/enrollments_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/enrollments_controller.rb:18:in `create'
+Redirected to http://localhost:3000/course_registration
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms | Allocations: 5041)
+
+
+Started GET "/course_registration" for ::1 at 2024-07-08 18:26:16 +0900
+Processing by RegistrationsController#course_registration as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/course_registration.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:52
+  Rendered registrations/course_registration.html.erb within layouts/application (Duration: 32.1ms | Allocations: 39340)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 40252)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 1.1ms | Allocations: 40540)
+
+
+Started GET "/course_registration" for ::1 at 2024-07-08 18:27:29 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#course_registration as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/course_registration.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.1ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  Rendered registrations/course_registration.html.erb within layouts/application (Duration: 96.6ms | Allocations: 98378)
+  Rendered layout layouts/application.html.erb (Duration: 102.1ms | Allocations: 113266)
+Completed 200 OK in 110ms (Views: 99.8ms | ActiveRecord: 4.2ms | Allocations: 118498)
+
+
+Started DELETE "/enrollments/4" for ::1 at 2024-07-08 18:27:34 +0900
+Processing by EnrollmentsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/enrollments_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/enrollments_controller.rb:41:in `destroy'
+  [1m[36mEnrollment Destroy (1.5ms)[0m  [1m[31mDELETE FROM "enrollments" WHERE "enrollments"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/enrollments_controller.rb:41:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/enrollments_controller.rb:41:in `destroy'
+Redirected to http://localhost:3000/course_registration
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms | Allocations: 3188)
+
+
+Started GET "/course_registration" for ::1 at 2024-07-08 18:27:34 +0900
+Processing by RegistrationsController#course_registration as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/course_registration.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  Rendered registrations/course_registration.html.erb within layouts/application (Duration: 29.9ms | Allocations: 39190)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 40103)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 1.0ms | Allocations: 40393)
+
+
+Started GET "/enrollments/new?day=%E6%9C%88%E6%9B%9C%E6%97%A5&period=4%E9%99%90&semester=%E5%89%8D%E6%9C%9F" for ::1 at 2024-07-08 18:27:45 +0900
+Processing by EnrollmentsController#new as HTML
+  Parameters: {"day"=>"月曜日", "period"=>"4限", "semester"=>"前期"}
+  Rendering layout layouts/application.html.erb
+  Rendering enrollments/new.html.erb within layouts/application
+  [1m[36mLecture Load (0.4ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ?[0m  [["day", "月曜日"], ["period", "4限"], ["semester", "前期"]]
+  ↳ app/views/enrollments/new.html.erb:9
+  Rendered enrollments/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2475)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3587)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 4073)
+
+
+Started POST "/enrollments" for ::1 at 2024-07-08 18:27:48 +0900
+Processing by EnrollmentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "enrollment"=>{"day"=>"月曜日", "period"=>"4限", "semester"=>"前期", "lecture_id"=>"25"}, "commit"=>"登録する"}
+[31mUnpermitted parameters: :day, :period, :semester. Context: { controller: EnrollmentsController, action: create, request: #<ActionDispatch::Request:0x000000012c55be00>, params: {"authenticity_token"=>"[FILTERED]", "enrollment"=>{"day"=>"月曜日", "period"=>"4限", "semester"=>"前期", "lecture_id"=>"25"}, "commit"=>"登録する", "controller"=>"enrollments", "action"=>"create"} }[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/enrollments_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/enrollments_controller.rb:18:in `create'
+  [1m[36mLecture Load (1.5ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/enrollments_controller.rb:18:in `create'
+  [1m[36mEnrollment Create (1.5ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "lecture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["lecture_id", 25], ["created_at", "2024-07-08 09:27:48.461310"], ["updated_at", "2024-07-08 09:27:48.461310"]]
+  ↳ app/controllers/enrollments_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/enrollments_controller.rb:18:in `create'
+Redirected to http://localhost:3000/course_registration
+Completed 302 Found in 14ms (ActiveRecord: 3.5ms | Allocations: 4782)
+
+
+Started GET "/course_registration" for ::1 at 2024-07-08 18:27:48 +0900
+Processing by RegistrationsController#course_registration as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/course_registration.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "1限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "2限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "3限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mLecture Load (0.0ms)[0m  [1m[34mSELECT "lectures".* FROM "lectures" WHERE "lectures"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:23
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "4限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "5限"], ["semester", "前期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:21
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "1限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "2限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "3限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "4限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "月曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "火曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "水曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "木曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" INNER JOIN "lectures" ON "lectures"."id" = "enrollments"."lecture_id" WHERE "enrollments"."user_id" = ? AND "lectures"."day" = ? AND "lectures"."period" = ? AND "lectures"."semester" = ? LIMIT ?[0m  [["user_id", 1], ["day", "金曜日"], ["period", "5限"], ["semester", "後期"], ["LIMIT", 1]]
+  ↳ app/views/registrations/course_registration.html.erb:53
+  Rendered registrations/course_registration.html.erb within layouts/application (Duration: 43.0ms | Allocations: 39783)
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 40696)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 1.2ms | Allocations: 40940)
+
+
