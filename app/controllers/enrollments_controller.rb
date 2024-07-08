@@ -30,7 +30,7 @@ class EnrollmentsController < ApplicationController
     @enrollment = Enrollment.find(params[:id])
 
     if @enrollment.update(enrollment_params)
-      redirect_to @enrollment, notice: 'Enrollment was successfully updated.'
+      redirect_to course_registration_path, notice: '授業を更新しました。'
     else
       render :edit
     end
