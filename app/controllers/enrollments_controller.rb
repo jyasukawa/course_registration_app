@@ -13,11 +13,16 @@ class EnrollmentsController < ApplicationController
 
   def create
     @enrollment = Enrollment.new(enrollment_params)
+    @enrollment.user = current_user
 
     if @enrollment.save
-      redirect_to @enrollment, notice: 'Enrollment was successfully created.'
+      redirect_to course_registration_path, notice: '授業を登録しました。'
     else
       render :new
+    end
+
+    def enrollment_params
+      params.require(:enrollment).permit(:lecture_id)
     end
   end
 

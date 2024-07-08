@@ -9,9 +9,26 @@
 <% if lectures.present? %>
   <ul>
     <% lectures.each do |lecture| %>
-      <li><%= lecture.name %></li>
+      <li>
+        <%= lecture.name %>
+      </li>
     <% end %>
   </ul>
+
+  <h3>授業を選択して登録</h3>
+  <%= form_with(model: @enrollment, url: enrollments_path, method: :post) do |form| %>
+    <%= form.hidden_field :day, value: params[:day] %>
+    <%= form.hidden_field :period, value: params[:period] %>
+    <%= form.hidden_field :semester, value: params[:semester] %>
+    
+    <div class="form-group">
+      <%= form.label :lecture_id, '授業名' %>
+      <%= form.collection_select :lecture_id, lectures, :id, :name, prompt: '授業を選択してください', class: 'form-control' %>
+    </div>
+    
+    <%= form.submit '登録する', class: 'btn btn-primary' %>
+  <% end %>
+
 <% else %>
   <p>該当する授業がありません。</p>
 <% end %>
