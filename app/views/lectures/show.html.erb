@@ -1,0 +1,8 @@
+<h1><%= @lecture.name %> の詳細情報</h1>
+<p><strong>担当教師:</strong> <%= @lecture.teacher.name %></p>
+<p><strong>説明:</strong> <%= @lecture.description %></p>
+<p><strong>単位数:</strong> <%= @lecture.credits %> 単位</p>
+<p><strong>学期:</strong> <%= @lecture.semester %></p>
+<p><strong>曜日・時限:</strong> <%= @lecture.day %> <%= @lecture.period %>限</p>
+
+<%= link_to '戻る', :back, class: 'btn btn-secondary mb-3' %>

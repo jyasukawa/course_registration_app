@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   }
   get 'course_registration', to: 'registrations#course_registration', as: 'course_registration'
   resources :enrollments
+  resources :lectures
 end
