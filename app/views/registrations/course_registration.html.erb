@@ -22,7 +22,7 @@
             <% if lecture %>
               <%= lecture.lecture.name %> <br>
             <% else %>
-              <%= button_to '追加', new_enrollment_path(day: day, period: "#{period}限", semester: '前期'), method: :get, class: 'btn btn-success btn-sm' %>
+              <%= link_to '追加', new_enrollment_path(day: day, period: "#{period}限", semester: '前期'), class: 'btn btn-success btn-sm' %>
             <% end %>
           </td>
         <% end %>
@@ -53,7 +53,7 @@
             <% if lecture %>
               <%= lecture.lecture.name %> <br>
             <% else %>
-              <%= button_to '追加', new_enrollment_path(day: day, period: "#{period}限", semester: '後期'), method: :get, class: 'btn btn-success btn-sm' %>
+              <%= link_to '追加', new_enrollment_path(day: day, period: "#{period}限", semester: '後期'), class: 'btn btn-success btn-sm' %>
             <% end %>
           </td>
         <% end %>
@@ -62,6 +62,6 @@
   </tbody>
 </table>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", home_top_path %>
 
 <%= stylesheet_link_tag 'home_top' %>

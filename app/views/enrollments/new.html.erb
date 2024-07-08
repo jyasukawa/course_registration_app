@@ -1,0 +1,17 @@
+<h1>新規授業登録</h1>
+
+<%= link_to '戻る', :back, class: 'btn btn-secondary mb-3' %>
+
+<h2>授業一覧</h2>
+
+<% lectures = Lecture.where(day: params[:day], period: params[:period], semester: params[:semester]) %>
+
+<% if lectures.present? %>
+  <ul>
+    <% lectures.each do |lecture| %>
+      <li><%= lecture.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>該当する授業がありません。</p>
+<% end %>
