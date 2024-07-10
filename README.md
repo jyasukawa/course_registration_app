@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+大学講義管理システムのWebアプリケーションシステム構築
 
-Things you may want to cover:
 
-* Ruby version
+<事前に登録されたユーザー>
 
-* System dependencies
+メールアドレス：user1@example.com
+パスワード		：password1
 
-* Configuration
+メールアドレス：user2@example.com
+パスワード		：password2
 
-* Database creation
 
-* Database initialization
+<動作確認方法>
 
-* How to run the test suite
+1. git clone https://github.com/jyasukawa/course_registration_app.git course_registration_app
 
-* Services (job queues, cache servers, search engines, etc.)
+2. cd course_registration_app
 
-* Deployment instructions
+3. rails s
 
-* ...
+4. localhost:3000　にアクセス
